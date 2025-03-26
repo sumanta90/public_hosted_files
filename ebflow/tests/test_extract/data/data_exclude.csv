@@ -1,0 +1,16 @@
+Srno,StoreID,CompanyName,PurchaseItem,ItemCode,TransactionType,NullColumn,TransactionComplete,Description
+1,Store1,Company A,Books,Item-B,type-cash,,TRUE,this is a perfect row
+2,Store1,Company B,Cards,Item-C,type-credit,NotNull,FALSE,this row has data in NullColumn
+3,Store1,Company C,Eggs,Item-E,type-cash,,,this row has data missing in a required column TransactionComplete
+4,Store1,A,Apples,Item-A,type-upi,,TRUE,word 'Company' is not present
+5,Store1,Company D,Cards,C,type-upi,,FALSE,word 'Item' is not present
+6,Store2,Company D,Cards,Item-C,type-upi,,FALSE,StoreID does not match
+7,Store1,Company A,Books,Item-B,type-cash,,TRUE,this is a perfect row
+8,Store1,C,Books,B,debit,,TRUE,words 'Company' 'Item' and 'type' missing for literal and/or checks
+9,Store1,Company C,Books,Item-B,type-debit,,TRUE,this is a perfect row
+10,Store2,D,Cards,Item-C,type-upi,value,FALSE,NullColumn has values and 'Company' missing and StoreID does not match
+11,Store1,Company C,Books,B,type-debit,,,'Item' missing required TransactionComplete empty
+12,Store1,Company A,Books,Item-B,type-cash,,TRUE,this is a perfect row
+13,Store2,A,Books,B,cash,value,,everything is wrong
+14,Store1,Company A,Books,Item-B,cash,,,TransactionType and TransactionComplete both wrong
+15,Store1,Company A,Books,Item-B,type-cash,,TRUE,this is a perfect row

@@ -1,0 +1,171 @@
+erp_id: sage200
+mappings:
+-   extract: REPORT
+    reports:
+    -   input_files:
+        -   encoding_format: utf-8
+            fields:
+            -   cdm_field_names:
+                - glAccountNumber
+                data_type: string
+                date_format: ''
+                field_name: NLNominalAccounts.AccountNumber
+                isOpen: false
+                nullable: false
+                required: true
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: NLNominalAccounts.AccountCostCentre
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: NLNominalAccounts.AccountDepartment
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: NLNominalAccounts.AccountName
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: decimal
+                date_format: ''
+                field_name: NLNominalAccounts.BroughtForwardBalance
+                isOpen: false
+                nullable: true
+                required: false
+            -   cdm_field_names:
+                - journalId
+                - journalIdLineNumber
+                data_type: string
+                date_format: ''
+                field_name: NLPostedNominalTrans.UniqueReferenceNumber
+                isOpen: false
+                nullable: false
+                required: true
+            -   cdm_field_names:
+                - transactionId
+                data_type: string
+                date_format: ''
+                field_name: NLPostedNominalTrans.URN
+                isOpen: false
+                nullable: false
+                required: true
+            -   cdm_field_names:
+                - effectiveDate
+                data_type: datetime
+                date_format: dd-mm-yyyy
+                field_name: NLPostedNominalTrans.TransactionDate
+                isOpen: false
+                nullable: false
+                required: true
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: SYSAccountingPeriods.PeriodNumber
+                nullable: true
+                required: false
+            -   cdm_field_names:
+                - jeHeaderDescription
+                data_type: string
+                date_format: ''
+                field_name: NLPostedNominalTrans.Reference
+                isOpen: false
+                nullable: true
+                required: true
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: NLPostedNominalTrans.Narrative
+                nullable: true
+                required: false
+            -   cdm_field_names:
+                - amount
+                - amountCreditDebitIndicator
+                data_type: decimal
+                date_format: ''
+                field_name: NLPostedNominalTrans.GoodsValueInBaseCurrency
+                isOpen: false
+                nullable: false
+                required: true
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: NLPostedNominalTrans.TransactionAnalysisCode
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: decimal
+                date_format: ''
+                field_name: NLNominalAccounts.Balance
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: SYSCompanies.CompanyName
+                nullable: true
+                required: false
+            # Adding Custom fields to file_config for new_cdm_field check (added below in mandatory_field_check)
+            -   cdm_field_names: [Custom_cdm1]
+                data_type: string
+                date_format: ''
+                field_name: Custom1
+                nullable: true
+                required: false
+            -   cdm_field_names: [Custom_cdm2]
+                data_type: string
+                date_format: ''
+                field_name: Custom2
+                nullable: true
+                required: false
+            -   cdm_field_names: [Custom_cdm3]
+                data_type: string
+                date_format: ''
+                field_name: Custom3
+                nullable: true
+                required: false
+            -   cdm_field_names: [Custom_cdm4]
+                data_type: string
+                date_format: ''
+                field_name: Custom4
+                nullable: true
+                required: false
+            file_name: glDetail_report.csv
+            mandatory_field_check:
+            -   cdm_field_name: amount
+                occurrence_count: 1
+            -   cdm_field_name: amountCreditDebitIndicator
+                occurrence_count: 1
+            -   cdm_field_name: effectiveDate
+                occurrence_count: 1
+            -   cdm_field_name: glAccountNumber
+                occurrence_count: 1
+            -   cdm_field_name: jeHeaderDescription
+                occurrence_count: 1
+            -   cdm_field_name: journalId
+                occurrence_count: 1
+            -   cdm_field_name: journalIdLineNumber
+                occurrence_count: 1
+            -   cdm_field_name: transactionId
+                occurrence_count: 1
+            # Added Random1 cdm_field to check for occurrence count 0
+            -   cdm_field_name: Random
+                occurrence_count: 0
+            # Adding Custom_cdm1, Custom_cdm2, Custom_cdm3 fields to check for unmatched columns
+            -   cdm_field_name: Custom_cdm1
+                occurrence_count: 1
+            -   cdm_field_name: Custom_cdm2
+                occurrence_count: 1
+            -   cdm_field_name: Custom_cdm3
+                occurrence_count: 1
+            -   cdm_field_name: Custom_cdm4
+                occurrence_count: 1
+            template:
+                sheet_name: ''
+                start_row: 2
+        report_type: glDetail

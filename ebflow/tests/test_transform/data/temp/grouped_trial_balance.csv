@@ -1,0 +1,8 @@
+glAccountName,glAccountNumber,amountEnding,description,accountType,accountSubType,fsCaption,accountName,glMapNumber
+Freehold Property,2100,,-Freehold Property,A. Assets,II. Noncurrent Assets,Tangible fixed assets,L/Term L/hold property-depn b/fwd,A01.02.00.51
+Lease Property,3100,-40,- Lease Property,A. Assets,II. Noncurrent Assets,Tangible fixed assets,L/Term L/hold property-depn b/fwd,A01.02.00.51
+-Plant/Machinery - Cost,4100,-100,Plant/Machinery - Cost,E. Expenses,I. Cost of Sales,Cost of goods sold,Purchases - finished goods,M01.63.00.23
+-Plant/Machinery - Cost,4100,200,Plant/Machinery - Cost,E. Expenses,I. Cost of Sales,Cost of goods sold,Purchases - finished goods,M01.63.00.23
+- Plant/Machinery - Depr.,4200,120,Plant/Machinery - Depr.,A. Assets,II. Noncurrent Assets,Tangible fixed assets,L/Term L/hold property-depn b/fwd,A01.02.00.51
+Office Equipment - Cost,6100,50,Office Equipment - Cost,A. Assets,II. Noncurrent Assets,Tangible fixed assets,Computer equipment-depn b/fwd,A01.08.00.51
+Office Equipment - Dep,6200,60,,,,,,

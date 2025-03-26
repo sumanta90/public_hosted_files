@@ -1,0 +1,7 @@
+erp_string,erp_number1,erp_number2,erp_bool,erp_date,erp_time,erp_datetime,erp_fill_down,erp_account
+Abhay,10,20,TRUE,10-12-2000,13:20,25-04-2004 16:40,,<|abc|>xyz<|account name|>
+Raj,-30,10,FALSE,11-06-2000,05:40,15-03-2005 15:30,,account <|abc|> <||>name
+Raj,40,0,TRUE,11-06-2000,05:40,15-03-2005 15:30,xyz,abc<|account name|>xyz
+Abhay,-20,20,TRUE,10-12-2000,13:20,25-04-2004 16:40,,account name
+Raj,40,0,FALSE,11-06-2000,05:40,15-03-2005 15:30,abc,
+Abhay,20,20,FALSE,10-12-2000,13:20,25-04-2004 16:40,,|>|>account name<|<|

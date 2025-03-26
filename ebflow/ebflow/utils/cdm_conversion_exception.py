@@ -1,0 +1,2 @@
+class CDMConversionException(Exception):
+    pass

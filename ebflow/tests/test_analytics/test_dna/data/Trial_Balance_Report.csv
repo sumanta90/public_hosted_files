@@ -1,0 +1,7 @@
+account_id, account_name, opening, closing, fldt, dci_col,dci_amt, extra
+1, account1, 100, 600, 1, D, 100, 10
+2, account2, 300, 500, 1, C, 200, 20
+3, account3, 400, 400, 1, D, 100, 30
+4, account4, 500, 300, 2, C, 200, 40
+5, account5, 600, 100, 2, D, 100, 50
+5, account5, 600, 100, 2, D, 100, 60

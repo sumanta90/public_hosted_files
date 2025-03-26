@@ -1,0 +1,7 @@
+glAccountNumber,businessUnitCode,amount,localAmount,amountCreditDebitIndicator,amountBeginning,amountEnding,journalId,journalIdNonNumeric,enteredBy,enteredDateTime,approvedBy,approvedDateTime,lastModifiedBy,reversalIndicator,reversalJournalId,journalEntryType,sourceId
+A1,B1,200,200,D,120.1231,120.1231,1,A1,Value,,Value,Value,Value,,Value,Value,Value
+A2,B2,100,-100,C,140.123123,-140.123123,2,A2,Value,,,Value,Value,,Value,Value,Value
+A3,B3,200,200,,120.12312,,4,A5,Value,,Value,Value,Value,Value,Value,Value,Value
+A1,B4,300,-300,C,20.1232131,17.1232131,5,5,,,,Value,Value,Value,Value,Value,Value
+A2,B5,,,D,12.2323232,12.9999322,,A6,Value,,Value,Value,Value,Value,Value,,Value
+A3,B6,100,100,D,30.1231232,-10.1231232,8,A8,Value,,Value,Value,Value,Value,Value,,Value

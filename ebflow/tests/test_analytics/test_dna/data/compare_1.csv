@@ -1,0 +1,6 @@
+employee_id, employee_name, salary, edept_id
+1, John, 1000, 1
+2, Smith, 2000, 2
+3, Peter, 3000, 1
+4, Bob, 4000, 2
+5, Tom, 5000, 1

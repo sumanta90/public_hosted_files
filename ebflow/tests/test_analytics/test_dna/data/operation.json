@@ -1,0 +1,231 @@
+{
+    "nodes":[
+
+        {
+            "node_id": "1",
+            "data": {
+                "type": "extract",
+                "file_name": "tests/test_analytics/test_dna/data/Trial_Balance_Report.csv",
+                "file_path": "tests/test_analytics/test_dna/data/Trial_Balance_Report.csv"
+            }
+        },
+        {
+            "node_id": "2",
+            "data": {
+                "type": "transform",
+                "operation_name": "count",
+                "column_name": "opening",
+                "unique": true 
+            }
+        },
+        {
+            "node_id": "3",
+            "data": {
+                "type": "transform",
+                "operation_name": "filter",
+                "column_name": "fldt",
+                "operation_formula": "==",
+                "operation_value": "1"
+            }
+        },
+        {
+            "node_id": "4",
+            "data": {
+                "type": "transform",
+                "operation_name": "sum",
+                "column_name": "closing"
+            }
+        },
+        {
+            "node_id": "5",
+            "data": {
+                "type": "load",
+                "file_name": "op1.csv",
+                "file_path": "op1.csv"
+            }
+        },
+        {
+            "node_id": "6",
+            "data": {
+                "type": "load",
+                "file_name": "op2.csv",
+                "file_path": "op2.csv"
+            }
+        },
+
+        {
+            "node_id": "7",
+            "data": {
+                "type": "transform",
+                "operation_name": "min",
+                "column_name": "closing"
+            }
+        },
+        {
+            "node_id": "8",
+            "data": {
+                "type": "load",
+                "file_name": "op3.csv",
+                "file_path": "op3.csv"
+            }
+        },
+
+        {
+            "node_id": "9",
+            "data": {
+                "type": "transform",
+                "operation_name": "min",
+                "column_name": "closing"
+            }
+        },
+        {
+            "node_id": "10",
+            "data": {
+                "type": "load",
+                "file_name": "op4.csv",
+                "file_path": "op4.csv"
+            }
+        },
+        {
+            "node_id": "11",
+            "data": {
+                "type": "transform",
+                "operation_name": "net",
+                "dci_column": "dci_col",
+                "amount_column": "dci_amt"
+            }
+        },
+        {
+            "node_id": "12",
+            "data": {
+                "type": "load",
+                "file_name": "op5.csv",
+                "file_path": "op5.csv"
+            }
+        },
+        {
+            "node_id": "13",
+            "data": {
+                "type": "transform",
+                "operation_name": "delete_column",
+                "column_name": "fldt"
+            }
+        },
+        {
+            "node_id": "14",
+            "data": {
+                "type": "load",
+                "file_name": "op6.csv",
+                "file_path": "op6.csv"
+            }
+        },
+        {
+            "node_id": "15",
+            "data": {
+                "type": "transform",
+                "operation_name": "duplicate"
+            }
+        },
+        {
+            "node_id": "16",
+            "data": {
+                "type": "load",
+                "file_name": "op7.csv",
+                "file_path": "op7.csv"
+            }
+        },
+        {
+            "node_id": "17",
+            "data": {
+                "type": "transform",
+                "operation_name": "multiple_calculation",
+                "data": {
+                    "expression": "A+B+C",
+                    "column": {
+                        "A": "opening",
+                        "B": "closing",
+                        "C": "extra"
+                    }
+                }
+            }
+        },
+        {
+            "node_id": "18",
+            "data": {
+                "type": "load",
+                "file_name": "op8.csv",
+                "file_path": "op8.csv"
+            }
+        }
+    ],
+    "edges":[
+        {
+            "source": "1",
+            "target": "2"
+        },
+        {
+            "source": "1",
+            "target": "15"
+        },
+        {
+            "source": "1",
+            "target": "11"
+        },
+        {
+            "source": "1",
+            "target": "7"
+        },
+        {
+            "source": "1",
+            "target": "9"
+        },
+        {
+            "source": "1",
+            "target": "13"
+        },
+        {
+            "source": "1",
+            "target": "3"
+        },
+        {
+            "source": "1",
+            "target": "17"
+        },
+        {
+            "source": "3",
+            "target": "4"
+        },
+        {
+            "source": "4",
+            "target": "5"
+        },
+        {
+            "source": "2",
+            "target": "6"
+        },
+        {
+            "source": "7",
+            "target": "8"
+        },
+        {
+            "source": "9",
+            "target": "10"
+        },
+        {
+            "source": "11",
+            "target": "12"
+        },
+        {
+            "source": "13",
+            "target": "14"
+        },
+        {
+            "source": "15",
+            "target": "16"
+        },
+        {
+            "source": "17",
+            "target": "18"
+        }
+    ]
+}

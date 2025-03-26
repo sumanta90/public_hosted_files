@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "frictionless-azureblob"
+version = "0.4.0"
+description = ""
+authors = ["sumanta90"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+azure-storage-blob = "^12.19.0"
+azure-identity = "^1.15.0"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
